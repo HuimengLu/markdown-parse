@@ -26,11 +26,10 @@ public class MarkdownParse {
                 break; // fixed the program, break if paren is not found
             }
 
-            if(openParen - nextCloseBracket > 1){
-                break;
+            if(openParen - nextCloseBracket <= 1){
+                toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
 
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
         System.out.println("current index: " + currentIndex);

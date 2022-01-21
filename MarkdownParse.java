@@ -25,6 +25,11 @@ public class MarkdownParse {
             if(closeParen == -1 || openParen == -1){
                 break; // fixed the program, break if paren is not found
             }
+
+            if(openParen - nextCloseBracket > 1){
+                break;
+            }
+
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }

@@ -53,14 +53,14 @@ public class MarkdownParseTest {
         
         assertEquals(List.of(),links);
     }
-//     @Test
-//     public void fifthFile() throws IOException{
-//         Path fileName = Path.of("test-file5.md");
-// 	    String contents = Files.readString(fileName);
-//         ArrayList<String> links = MarkdownParse.getLinks(contents);
+    @Test
+    public void fifthFile() throws IOException{
+        Path fileName = Path.of("test-file5.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
         
-//         assertEquals(List.of(),links);
-//     }
+        assertEquals(List.of(),links);
+    }
     @Test
     public void sixthFile() throws IOException{
         Path fileName = Path.of("test-file6.md");

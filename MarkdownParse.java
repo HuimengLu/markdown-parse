@@ -21,7 +21,7 @@ public class MarkdownParse {
                     continue;
                 }
 		if (nextOpenBracket != openParen - 1) {
-                    currentIndex = closeParen + 1;
+                    currentIndex++;
                     continue;
                 }
                 try {

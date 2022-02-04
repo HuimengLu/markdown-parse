@@ -20,8 +20,8 @@ public class MarkdownParse {
                     currentIndex++;
                     continue;
                 }
-		if (nextOpenBracket != openParen - 1) {
-                    currentIndex++;
+		if (nextCloseBracket != openParen - 1) {
+                    currentIndex = closeParen + 1;
                     continue;
                 }
                 try {
